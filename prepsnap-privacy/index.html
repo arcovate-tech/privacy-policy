@@ -6,523 +6,310 @@
   <title>Privacy Policy — PrepSnap</title>
   <style>
     :root {
-      --bg:       #0d0f14;
-      --surface:  #13161e;
-      --border:   rgba(255,255,255,0.08);
-      --accent:   #5b8cf8;
-      --accent-d: rgba(91,140,248,0.12);
-      --tx0:      #eef0f8;
-      --tx1:      #8d93ae;
-      --tx2:      #505672;
-      --ok:       #34d399;
-      --radius:   12px;
+      --bg:      #06080d;
+      --surface: #0e1117;
+      --bd:      rgba(255,255,255,0.07);
+      --ac:      #5b8cf8;
+      --ac-d:    rgba(91,140,248,0.10);
+      --ac-g:    rgba(91,140,248,0.20);
+      --tx0:     #eef0fc;
+      --tx1:     #8d93b8;
+      --tx2:     #444c6e;
+      --ok:      #34d399;
+      --ok-d:    rgba(52,211,153,0.10);
+      --r:       12px;
     }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: 'Segoe UI', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--tx0);
-      line-height: 1.7;
-      font-size: 15px;
-      min-height: 100vh;
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{font-size:16px}
+    body{
+      font-family:'Segoe UI',system-ui,sans-serif;
+      background:var(--bg);color:var(--tx0);
+      line-height:1.7;min-height:100vh;
     }
-
-    /* ── Top accent bar ── */
-    body::before {
-      content: '';
-      display: block;
-      height: 3px;
-      background: linear-gradient(90deg, var(--accent), #8060f0, var(--ok));
+    body::before{
+      content:'';display:block;height:3px;
+      background:linear-gradient(90deg,var(--ac),#8060f0,var(--ok));
     }
-
-    /* ── Header ── */
-    header {
-      background: var(--surface);
-      border-bottom: 1px solid var(--border);
-      padding: 28px 24px 22px;
-      text-align: center;
+    header{
+      background:var(--surface);
+      border-bottom:1px solid var(--bd);
+      padding:28px 24px 22px;text-align:center;
     }
-
-    .logo-row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 6px;
+    .logo-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:6px}
+    .logo-icon{
+      width:36px;height:36px;border-radius:9px;
+      background:var(--ac-d);border:1px solid var(--ac-g);
+      display:flex;align-items:center;justify-content:center;color:var(--ac);
     }
-
-    .logo-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 9px;
-      background: var(--accent-d);
-      border: 1px solid rgba(91,140,248,0.25);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      flex-shrink: 0;
+    .brand{font-size:1.4rem;font-weight:700;letter-spacing:0.03em}
+    .brand span{color:var(--ac)}
+    .tagline{font-size:0.78rem;color:var(--tx2);letter-spacing:0.07em;text-transform:uppercase;margin-top:2px}
+    .pills{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .pill{font-size:0.72rem;color:var(--tx1);background:var(--bg);border:1px solid var(--bd);padding:4px 12px;border-radius:99px}
+    .pill strong{color:var(--tx0)}
+    main{max-width:740px;margin:0 auto;padding:36px 24px 60px}
+    .card{
+      background:var(--surface);border:1px solid var(--bd);
+      border-radius:var(--r);padding:24px 26px;margin-bottom:14px;
     }
-
-    .brand {
-      font-size: 1.4rem;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-      color: var(--tx0);
+    h2{
+      font-size:0.7rem;font-weight:700;letter-spacing:0.1em;
+      text-transform:uppercase;color:var(--ac);
+      margin-bottom:16px;padding-bottom:10px;
+      border-bottom:1px solid var(--bd);
+      display:flex;align-items:center;gap:8px;
     }
-
-    .brand span { color: var(--accent); }
-
-    .tagline {
-      font-size: 0.8rem;
-      color: var(--tx2);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-top: 2px;
+    h2::before{
+      content:attr(data-n);
+      font-size:0.65rem;background:var(--ac-d);color:var(--ac);
+      border:1px solid var(--ac-g);width:22px;height:22px;
+      border-radius:6px;display:flex;align-items:center;
+      justify-content:center;flex-shrink:0;font-weight:700;
     }
-
-    .meta-pills {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 16px;
+    h3{font-size:0.82rem;font-weight:600;color:var(--tx0);margin:18px 0 8px;letter-spacing:0.02em}
+    h3:first-of-type{margin-top:0}
+    p{font-size:0.87rem;color:var(--tx1);margin-bottom:10px;line-height:1.7}
+    p:last-child{margin-bottom:0}
+    ul{list-style:none;margin:8px 0 12px;display:flex;flex-direction:column;gap:6px}
+    li{font-size:0.85rem;color:var(--tx1);padding-left:16px;position:relative;line-height:1.6}
+    li::before{content:'';position:absolute;left:0;top:9px;width:5px;height:5px;border-radius:50%;background:var(--ac);opacity:0.55}
+    li strong{color:var(--tx0);font-weight:600}
+    .table-wrap{overflow-x:auto;border-radius:8px;border:1px solid var(--bd);margin:12px 0}
+    table{width:100%;border-collapse:collapse;font-size:0.82rem}
+    thead{background:rgba(91,140,248,0.07)}
+    th{padding:10px 14px;text-align:left;font-size:0.66rem;font-weight:700;
+       letter-spacing:0.09em;text-transform:uppercase;color:var(--ac);
+       border-bottom:1px solid var(--bd)}
+    td{padding:10px 14px;color:var(--tx1);border-bottom:1px solid var(--bd);
+       line-height:1.5;vertical-align:top}
+    tr:last-child td{border-bottom:none}
+    td:first-child{font-family:'Courier New',monospace;font-size:0.77rem;color:var(--ac);white-space:nowrap}
+    .callout{border-radius:9px;padding:12px 15px;margin:12px 0;font-size:0.83rem;line-height:1.6}
+    .callout-ok{background:var(--ok-d);border:1px solid rgba(52,211,153,0.2);color:var(--ok)}
+    .callout-info{background:var(--ac-d);border:1px solid var(--ac-g);color:var(--tx1)}
+    .callout strong{color:var(--tx0)}
+    .contact-card{background:var(--ac-d);border:1px solid var(--ac-g);border-radius:10px;padding:16px 18px;margin-top:10px}
+    .contact-card p{font-size:0.84rem;color:var(--tx1);margin-bottom:5px}
+    .contact-card p:last-child{margin-bottom:0}
+    .contact-card strong{color:var(--tx0)}
+    a{color:var(--ac);text-decoration:none;border-bottom:1px solid rgba(91,140,248,0.3);transition:border-color 0.15s}
+    a:hover{border-bottom-color:var(--ac)}
+    footer{
+      border-top:1px solid var(--bd);padding:24px;text-align:center;
+      font-size:0.72rem;color:var(--tx2);letter-spacing:0.03em;line-height:1.9;
     }
-
-    .pill {
-      font-size: 0.73rem;
-      color: var(--tx1);
-      background: var(--bg);
-      border: 1px solid var(--border);
-      padding: 4px 12px;
-      border-radius: 99px;
-      letter-spacing: 0.02em;
-    }
-
-    .pill strong { color: var(--tx0); }
-
-    /* ── Main container ── */
-    main {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 40px 24px 60px;
-    }
-
-    /* ── Section blocks ── */
-    .section {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 24px 26px;
-      margin-bottom: 16px;
-    }
-
-    h2 {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid var(--border);
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    h2::before {
-      content: attr(data-num);
-      font-size: 0.65rem;
-      background: var(--accent-d);
-      color: var(--accent);
-      border: 1px solid rgba(91,140,248,0.2);
-      width: 22px;
-      height: 22px;
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-weight: 700;
-    }
-
-    h3 {
-      font-size: 0.82rem;
-      font-weight: 600;
-      color: var(--tx0);
-      margin: 18px 0 8px;
-      letter-spacing: 0.02em;
-    }
-
-    h3:first-of-type { margin-top: 0; }
-
-    p {
-      font-size: 0.88rem;
-      color: var(--tx1);
-      margin-bottom: 10px;
-      line-height: 1.7;
-    }
-
-    p:last-child { margin-bottom: 0; }
-
-    ul {
-      list-style: none;
-      margin: 8px 0 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    ul li {
-      font-size: 0.86rem;
-      color: var(--tx1);
-      padding-left: 18px;
-      position: relative;
-      line-height: 1.6;
-    }
-
-    ul li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 9px;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--accent);
-      opacity: 0.6;
-    }
-
-    ul li strong { color: var(--tx0); font-weight: 600; }
-
-    /* ── Permissions table ── */
-    .table-wrap {
-      overflow-x: auto;
-      margin: 10px 0;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.83rem;
-    }
-
-    thead { background: rgba(91,140,248,0.08); }
-
-    th {
-      text-align: left;
-      padding: 10px 14px;
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--accent);
-      border-bottom: 1px solid var(--border);
-    }
-
-    td {
-      padding: 10px 14px;
-      color: var(--tx1);
-      border-bottom: 1px solid var(--border);
-      line-height: 1.55;
-      vertical-align: top;
-    }
-
-    tr:last-child td { border-bottom: none; }
-
-    td:first-child {
-      font-family: 'Courier New', monospace;
-      font-size: 0.78rem;
-      color: var(--accent);
-      white-space: nowrap;
-    }
-
-    /* ── Callout boxes ── */
-    .callout {
-      border-radius: 9px;
-      padding: 13px 15px;
-      margin: 12px 0;
-      font-size: 0.84rem;
-      line-height: 1.6;
-    }
-
-    .callout--info {
-      background: var(--accent-d);
-      border: 1px solid rgba(91,140,248,0.2);
-      color: var(--tx1);
-    }
-
-    .callout--ok {
-      background: rgba(52,211,153,0.08);
-      border: 1px solid rgba(52,211,153,0.2);
-      color: #34d399;
-    }
-
-    .callout strong { color: var(--tx0); }
-
-    /* ── External links ── */
-    a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(91,140,248,0.3);
-      transition: border-color 0.15s;
-    }
-
-    a:hover { border-bottom-color: var(--accent); }
-
-    /* ── Contact section ── */
-    .contact-card {
-      background: var(--accent-d);
-      border: 1px solid rgba(91,140,248,0.2);
-      border-radius: 10px;
-      padding: 16px 18px;
-      margin-top: 10px;
-    }
-
-    .contact-card p {
-      font-size: 0.85rem;
-      color: var(--tx1);
-      margin-bottom: 5px;
-    }
-
-    .contact-card p:last-child { margin-bottom: 0; }
-    .contact-card strong { color: var(--tx0); }
-
-    /* ── Footer ── */
-    footer {
-      text-align: center;
-      padding: 24px;
-      border-top: 1px solid var(--border);
-      font-size: 0.72rem;
-      color: var(--tx2);
-      letter-spacing: 0.03em;
-      line-height: 1.8;
-    }
-
-    footer a { color: var(--tx2); border-bottom-color: transparent; }
-    footer a:hover { color: var(--accent); }
-
-    /* ── Responsive ── */
-    @media (max-width: 600px) {
-      main { padding: 24px 16px 48px; }
-      .section { padding: 18px 16px; }
-      .meta-pills { gap: 6px; }
-    }
+    footer a{color:var(--tx2);border-bottom-color:transparent}
+    footer a:hover{color:var(--ac)}
+    @media(max-width:600px){main{padding:24px 16px 48px}.card{padding:18px 16px}}
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo-row">
-      <div class="logo-icon">
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-          <polygon points="9,1 11.5,7 18,7 13,10.8 15,17 9,13.5 3,17 5,10.8 0,7 6.5,7" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round" fill="currentColor" fill-opacity="0.15"/>
-          <circle cx="9" cy="9" r="2.2" fill="currentColor"/>
-        </svg>
-      </div>
-      <div class="brand">Prep<span>Snap</span></div>
+<header>
+  <div class="logo-row">
+    <div class="logo-icon">
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <polygon points="9,1 11.5,7 18,7 13,10.8 15,17 9,13.5 3,17 5,10.8 0,7 6.5,7"
+          stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"
+          fill="currentColor" fill-opacity="0.15"/>
+        <circle cx="9" cy="9" r="2.2" fill="currentColor"/>
+      </svg>
     </div>
-    <div class="tagline">AI Interview Preparation Engine</div>
-    <div class="meta-pills">
-      <span class="pill"><strong>Effective:</strong> 22 April 2026</span>
-      <span class="pill"><strong>Updated:</strong> 22 April 2026</span>
-      <span class="pill"><strong>Contact:</strong> arcovate.tech@gmail.com</span>
+    <div class="brand">Prep<span>Snap</span></div>
+  </div>
+  <div class="tagline">AI Interview Preparation Engine · Chrome Extension</div>
+  <div class="pills">
+    <span class="pill"><strong>Effective:</strong> 22 April 2026</span>
+    <span class="pill"><strong>Updated:</strong> 22 April 2026</span>
+    <span class="pill"><strong>Version:</strong> 1.0 — Free</span>
+    <span class="pill"><strong>Contact:</strong> arcovate.tech@gmail.com</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1 -->
+  <div class="card">
+    <h2 data-n="1">Introduction</h2>
+    <p>PrepSnap ("we", "our", or "us") is a Chrome extension developed by Arcovate Tech that helps users prepare for job interviews by analysing job descriptions and generating AI-powered interview questions, company culture snapshots, and preparation checklists.</p>
+    <p>We are committed to full transparency, minimal data collection, and protecting your privacy at every step. This policy explains exactly what happens to your data when you use PrepSnap.</p>
+    <div class="callout callout-ok"><strong>Version 1.0 of PrepSnap is completely free.</strong> There are no subscriptions, no payments, and no premium tiers in this version. All features are available to every user at no cost.</div>
+    <p>By installing and using PrepSnap, you agree to this Privacy Policy.</p>
+  </div>
+
+  <!-- 2 -->
+  <div class="card">
+    <h2 data-n="2">Data Collection and Usage</h2>
+
+    <h3>2.1 Job Description Content</h3>
+    <p>PrepSnap processes job description content <strong>only when you explicitly click "Generate Interview Pack."</strong> Nothing is collected passively or in the background.</p>
+    <ul>
+      <li>Text is read from what you paste, highlight on a page, or link via Google Docs — never collected automatically</li>
+      <li>Sent over HTTPS to our backend (a Supabase Edge Function) only on your explicit action</li>
+      <li>Forwarded to the Groq API solely to generate your interview pack</li>
+      <li><strong>Never stored</strong> in any database or log after the response is returned</li>
+      <li>Discarded immediately once the AI response is delivered to your browser</li>
+    </ul>
+
+    <h3>2.2 Google Docs / Drive Links</h3>
+    <p>If you provide a Google Docs or Drive link, our backend fetches the plain text content of that document server-side. This only works with documents set to "Anyone with the link can view." The link and document content are processed entirely in memory and never stored anywhere.</p>
+
+    <h3>2.3 Local Device Data</h3>
+    <p>The following data is stored <strong>only on your device</strong> using Chrome's local storage API. It never leaves your device and is never transmitted to any server:</p>
+    <ul>
+      <li>Your dark / light theme preference</li>
+      <li>Any text temporarily held between the right-click context menu action and the side panel opening (cleared immediately after use)</li>
+    </ul>
+    <div class="callout callout-ok">No usage counters, no session tracking, no identifiers of any kind are stored locally or remotely.</div>
+
+    <h3>2.4 Payments — Not Applicable in v1.0</h3>
+    <p>PrepSnap v1.0 is entirely free. <strong>There is no payment system, no subscription, and no billing of any kind in this version.</strong> We do not collect payment information, email addresses for purchase verification, or any financial data.</p>
+    <p>If a paid tier is introduced in a future version, this Privacy Policy will be updated accordingly before any payment functionality is enabled, and users will be notified via an updated version number and effective date.</p>
+
+    <h3>2.5 Data We Do NOT Collect</h3>
+    <ul>
+      <li>No browsing history or visited URLs</li>
+      <li>No passive or background data collection of any kind</li>
+      <li>No data from websites you visit beyond what you explicitly provide</li>
+      <li>No audio, video, or screen recording</li>
+      <li>No personally identifiable information (name, email, IP address)</li>
+      <li>No advertising IDs, tracking pixels, or behavioural profiling</li>
+      <li>No analytics or crash reporting SDKs</li>
+    </ul>
+  </div>
+
+  <!-- 3 -->
+  <div class="card">
+    <h2 data-n="3">Permissions Justification</h2>
+    <p>PrepSnap requests only the four permissions strictly necessary to function. No permission is used for tracking, surveillance, or any purpose beyond what is described below.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Permission</th><th>Why it is needed</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>`activeTab`</td>
+            <td>Allows the extension to open the Chrome Side Panel on the currently active tab when you click the toolbar icon. No page content is read.</td>
+          </tr>
+          <tr>
+            <td>`contextMenus`</td>
+            <td>Adds the "Analyze with PrepSnap" option to the right-click menu when you highlight text on any page. Only the text you have already selected is captured — nothing else on the page is read.</td>
+          </tr>
+          <tr>
+            <td>`storage`</td>
+            <td>Saves your dark/light theme preference locally on your device only. Also used to temporarily pass selected text from the context menu to the side panel. No data is sent to any server via this permission.</td>
+          </tr>
+          <tr>
+            <td>`sidePanel`</td>
+            <td>Enables PrepSnap to display its interface inside Chrome's native side panel rather than a popup. Required by Chrome for all side panel extensions.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-  </header>
+    <div class="callout callout-info">PrepSnap does <strong>not</strong> request: <strong>tabs, webRequest, history, cookies, identity, downloads, geolocation, management, nativeMessaging, declarativeNetRequest,</strong> or access to all URLs (<code>&lt;all_urls&gt;</code>). The only host permission declared is <code>https://*.supabase.co/*</code> — solely to reach our own backend.</div>
+  </div>
 
-  <main>
+  <!-- 4 -->
+  <div class="card">
+    <h2 data-n="4">Third-Party Services</h2>
 
-    <!-- 1. Introduction -->
-    <div class="section">
-      <h2 data-num="1">Introduction</h2>
-      <p>PrepSnap ("we", "our", or "us") is a Chrome extension that helps users prepare for job interviews by analysing job descriptions and generating AI-powered interview questions, company culture snapshots, and preparation checklists.</p>
-      <p>We are committed to transparency, minimal data usage, and protecting your privacy. This policy explains exactly what data we collect, what we do not collect, and how the extension operates.</p>
-      <p>By using PrepSnap, you agree to this Privacy Policy.</p>
+    <h3>4.1 Groq API (AI Processing)</h3>
+    <p>Job description content is sent to Groq's API to generate your interview pack. Groq processes this text to produce questions, culture insights, and checklist items.</p>
+    <ul>
+      <li>Used only when you explicitly click "Generate Interview Pack"</li>
+      <li>No personally identifiable information is sent — only the job description text you provide</li>
+      <li>Groq does not retain API request data after processing per their data policy</li>
+      <li>Groq does not use your data for AI model training via the API</li>
+    </ul>
+    <p>See <a href="https://groq.com/privacy-policy" target="_blank" rel="noopener">Groq Privacy Policy →</a></p>
+
+    <h3>4.2 Supabase (Backend Infrastructure)</h3>
+    <p>Our edge function — which holds the Groq API key securely server-side — is hosted on Supabase. Job description content passes through Supabase's infrastructure as part of the API request and is not retained by Supabase on our behalf.</p>
+    <p>See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy →</a></p>
+
+    <h3>4.3 Google Fonts &amp; Cloudflare CDN</h3>
+    <p>The extension loads display fonts from Google Fonts and the jsPDF library from Cloudflare's CDN. These are standard web resources loaded for visual rendering and PDF generation. No personal data from you is transmitted as part of these requests beyond standard HTTP headers (e.g. IP address) that any web request involves.</p>
+  </div>
+
+  <!-- 5 -->
+  <div class="card">
+    <h2 data-n="5">User Control</h2>
+    <ul>
+      <li>All data processing is triggered <strong>only by your explicit action</strong> — clicking "Generate Interview Pack"</li>
+      <li>You can clear all locally stored data at any time via Chrome Settings → Extensions → PrepSnap → Clear storage</li>
+      <li>You can uninstall PrepSnap at any time — this removes all locally stored data from your device immediately</li>
+      <li>There is nothing stored on our servers to delete — because we store nothing</li>
+    </ul>
+  </div>
+
+  <!-- 6 -->
+  <div class="card">
+    <h2 data-n="6">Data Security</h2>
+    <ul>
+      <li>All communication between the extension and our backend uses HTTPS/TLS encryption</li>
+      <li>The Groq API key is stored as a server-side environment secret in Supabase — it is never present in the extension's code, never transmitted to your browser, and never exposed to users</li>
+      <li>No centralised storage of any user-provided content</li>
+      <li>Local data is stored using Chrome's sandboxed <code>storage.local</code> API, accessible only to this extension</li>
+    </ul>
+  </div>
+
+  <!-- 7 -->
+  <div class="card">
+    <h2 data-n="7">Data Retention</h2>
+    <ul>
+      <li>Job description content is discarded immediately after your interview pack is generated — no retention of any kind</li>
+      <li>No long-term storage of any content you provide, on our servers or anywhere else</li>
+      <li>Theme preference persists locally on your device until you uninstall the extension or clear its data manually</li>
+    </ul>
+  </div>
+
+  <!-- 8 -->
+  <div class="card">
+    <h2 data-n="8">User Rights</h2>
+    <p>Because we do not store any personal data or job description content on our servers, the standard data deletion and access rights are satisfied automatically:</p>
+    <ul>
+      <li>Uninstalling PrepSnap removes all locally stored data from your device</li>
+      <li>You can clear local data via Chrome's extension management page at any time</li>
+      <li>There is no user account to delete — PrepSnap v1.0 does not require or create any user account</li>
+      <li>There is no data held by us to request, correct, or export</li>
+    </ul>
+  </div>
+
+  <!-- 9 -->
+  <div class="card">
+    <h2 data-n="9">Children's Privacy</h2>
+    <p>PrepSnap is designed for professional use by job seekers and working professionals. It is not directed at children under the age of 13. We do not knowingly collect any data from children. If you believe a minor has used this extension in a way that raises privacy concerns, please contact us at <a href="mailto:arcovate.tech@gmail.com">arcovate.tech@gmail.com</a>.</p>
+  </div>
+
+  <!-- 10 -->
+  <div class="card">
+    <h2 data-n="10">Policy Updates</h2>
+    <p>We may update this Privacy Policy as PrepSnap evolves — for example, if a paid tier or new feature is introduced. When we do, we will update the "Updated" date shown at the top of this page and increment the version number. Continued use of the extension after any update constitutes acceptance of the revised policy.</p>
+    <p>We will never introduce payment processing, user accounts, or additional data collection without updating this policy first.</p>
+  </div>
+
+  <!-- 11 -->
+  <div class="card">
+    <h2 data-n="11">Contact</h2>
+    <p>For any privacy-related questions, concerns, or requests:</p>
+    <div class="contact-card">
+      <p><strong>Email:</strong> <a href="mailto:arcovate.tech@gmail.com">arcovate.tech@gmail.com</a></p>
+      <p><strong>Developer:</strong> Arcovate Tech</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/arcovate-tech" target="_blank" rel="noopener">github.com/arcovate-tech</a></p>
     </div>
+  </div>
 
-    <!-- 2. Data Collection -->
-    <div class="section">
-      <h2 data-num="2">Data Collection and Usage</h2>
+</main>
 
-      <h3>2.1 Job Description Content</h3>
-      <p>PrepSnap only processes job description data when you explicitly click <strong>"Generate Interview Pack"</strong>.</p>
-      <ul>
-        <li>Job description text is read from what you paste, highlight, or link — never collected passively or in the background</li>
-        <li>Sent to our backend (Supabase Edge Function) only on your explicit action</li>
-        <li>Forwarded to the Groq API solely to generate your interview pack</li>
-        <li><strong>Never stored</strong> in any database or log after the response is returned</li>
-        <li>Discarded immediately after the AI response is delivered to your browser</li>
-      </ul>
-
-      <h3>2.2 Google Docs / Drive Links</h3>
-      <p>If you provide a Google Docs or Drive link, our backend fetches the plain text content of that document server-side. This only works with documents set to "Anyone with the link can view." The link and document content are processed in memory and never stored.</p>
-
-      <h3>2.3 Local Usage Data</h3>
-      <p>The following data is stored <strong>only on your device</strong> using Chrome's local storage:</p>
-      <ul>
-        <li>Your dark/light theme preference</li>
-        <li>Number of interview packs generated</li>
-        <li>Subscription status (free / Pro)</li>
-        <li>User consent confirmation</li>
-      </ul>
-      <div class="callout callout--ok">This data never leaves your device and is never transmitted to any server.</div>
-
-      <h3>2.4 Payment and License Verification</h3>
-      <p>Payments are handled securely by <strong>Dodo Payments</strong>. We do not collect or store your payment card details. See <a href="https://dodopayments.com/privacy" target="_blank" rel="noopener">Dodo Payments Privacy Policy</a>.</p>
-      <p>When you use the Pro verification feature, you enter your purchase email in the side panel to unlock unlimited downloads and premium features. This email is sent to our verification system (Supabase) solely to confirm your Pro licence. It is <strong>not</strong> used for marketing, tracking, or any other purpose, and is not stored beyond the verification check.</p>
-
-      <h3>2.5 Data We Do NOT Collect</h3>
-      <ul>
-        <li>No browsing history</li>
-        <li>No passive or background data collection</li>
-        <li>No data from websites you visit other than what you explicitly provide</li>
-        <li>No audio or video recording of any kind</li>
-        <li>No personally identifiable information beyond what you voluntarily enter</li>
-        <li>No advertising tracking or behavioural profiling</li>
-      </ul>
-    </div>
-
-    <!-- 3. Permissions -->
-    <div class="section">
-      <h2 data-num="3">Permissions Justification</h2>
-      <p>PrepSnap requests only the minimum permissions required to function:</p>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr><th>Permission</th><th>Why it is needed</th></tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>`activeTab`</td>
-              <td>Allows the extension to open the side panel on the current tab when you click the toolbar icon</td>
-            </tr>
-            <tr>
-              <td>`contextMenus`</td>
-              <td>Adds the "Analyze with PrepSnap" right-click option when you highlight text on any job page</td>
-            </tr>
-            <tr>
-              <td>`storage`</td>
-              <td>Saves your theme preference, usage count, and subscription status locally on your device only</td>
-            </tr>
-            <tr>
-              <td>`sidePanel`</td>
-              <td>Displays the interview pack and interface within Chrome's native side panel</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="callout callout--info">No permissions are used for tracking, background surveillance, or accessing data beyond what you explicitly provide.</div>
-    </div>
-
-    <!-- 4. Third Party -->
-    <div class="section">
-      <h2 data-num="4">Third-Party Services</h2>
-
-      <h3>4.1 Groq API (AI Processing)</h3>
-      <ul>
-        <li>Used only when you click "Generate Interview Pack"</li>
-        <li>Processes your job description to generate interview questions, culture insights, and prep checklist</li>
-        <li>Does not retain or store user data after processing</li>
-        <li>Does not use your data for AI model training</li>
-      </ul>
-      <p>See <a href="https://groq.com/privacy-policy" target="_blank" rel="noopener">Groq Privacy Policy</a>.</p>
-
-      <h3>4.2 Supabase (Backend Infrastructure)</h3>
-      <p>Our backend edge function is hosted on Supabase. Job description text passes through Supabase's infrastructure as part of the API call. Supabase does not retain this data on our behalf beyond the duration of the request.</p>
-      <p>See <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a>.</p>
-
-      <h3>4.3 Dodo Payments (Payment Processing)</h3>
-      <p>All billing and payment processing is handled securely by Dodo Payments. We do not have access to your card details or full payment information.</p>
-      <p>See <a href="https://dodopayments.com/privacy" target="_blank" rel="noopener">Dodo Payments Privacy Policy</a>.</p>
-
-      <h3>4.4 Google Fonts &amp; Cloudflare CDN</h3>
-      <p>The extension loads fonts from Google Fonts and the jsPDF library from Cloudflare's CDN for display and PDF generation purposes. No personal data is transmitted as part of these requests.</p>
-    </div>
-
-    <!-- 5. User Control -->
-    <div class="section">
-      <h2 data-num="5">User Control and Consent</h2>
-      <ul>
-        <li>Data processing only begins after your explicit action — clicking "Generate Interview Pack"</li>
-        <li>You can clear all locally stored data by uninstalling the extension or clearing extension data in Chrome settings</li>
-        <li>You may stop using the extension at any time with no data consequences</li>
-      </ul>
-    </div>
-
-    <!-- 6. Security -->
-    <div class="section">
-      <h2 data-num="6">Data Security</h2>
-      <ul>
-        <li>All communication between the extension and our backend uses HTTPS/TLS encryption</li>
-        <li>The Groq API key is stored as a server-side environment secret in Supabase and is never exposed in the extension's code or transmitted to your browser</li>
-        <li>No centralised storage of user content</li>
-        <li>Local-only data storage architecture for device preferences</li>
-      </ul>
-    </div>
-
-    <!-- 7. Retention -->
-    <div class="section">
-      <h2 data-num="7">Data Retention</h2>
-      <ul>
-        <li>Job description content is discarded immediately after your interview pack is generated</li>
-        <li>No long-term storage of any content you provide</li>
-        <li>Local device data (theme, usage count, subscription status) persists until you uninstall the extension or clear it manually via Chrome settings</li>
-      </ul>
-    </div>
-
-    <!-- 8. User Rights -->
-    <div class="section">
-      <h2 data-num="8">User Rights</h2>
-      <p>Since we do not store your personal data or job description content:</p>
-      <ul>
-        <li>Uninstalling PrepSnap removes all locally stored data from your device</li>
-        <li>You can clear local data via Chrome's extension settings at any time</li>
-        <li>There is no account to delete as we do not create user accounts in v1.0</li>
-      </ul>
-    </div>
-
-    <!-- 9. Children -->
-    <div class="section">
-      <h2 data-num="9">Children's Privacy</h2>
-      <p>PrepSnap is designed for professional use — specifically for job seekers and professionals preparing for interviews. It is not targeted at children. We do not knowingly collect personal data from anyone under the age of 13.</p>
-      <p>If you believe a minor has used this extension in a way that raises concerns, please contact us at <a href="mailto:arcovate.tech@gmail.com">arcovate.tech@gmail.com</a> and we will take appropriate action.</p>
-    </div>
-
-    <!-- 10. Policy Updates -->
-    <div class="section">
-      <h2 data-num="10">Policy Updates</h2>
-      <p>We may update this Privacy Policy periodically as the extension evolves. When we do, we will update the "Last Updated" date at the top of this page. Continued use of the extension after any changes constitutes your acceptance of the updated policy.</p>
-    </div>
-
-    <!-- 11. Contact -->
-    <div class="section">
-      <h2 data-num="11">Contact</h2>
-      <p>For any privacy-related questions, concerns, or requests:</p>
-      <div class="contact-card">
-        <p><strong>Email:</strong> <a href="mailto:arcovate.tech@gmail.com">arcovate.tech@gmail.com</a></p>
-        <p><strong>Developer:</strong> Arcovate Tech</p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/arcovate-tech" target="_blank" rel="noopener">github.com/arcovate-tech</a></p>
-      </div>
-    </div>
-
-  </main>
-
-  <footer>
-    <p>PrepSnap is an independent product by <strong>Arcovate Tech</strong></p>
-    <p>Not affiliated with Google, LinkedIn, Indeed, Groq, Supabase, or Dodo Payments.</p>
-    <br/>
-    <p>
-      <a href="https://arcovate-tech.github.io/privacy-policy/" target="_blank" rel="noopener">MeetSnap Privacy Policy</a>
-      &nbsp;·&nbsp;
-      <a href="mailto:arcovate.tech@gmail.com">arcovate.tech@gmail.com</a>
-    </p>
-  </footer>
+<footer>
+  <p>PrepSnap is an independent product by <strong>Arcovate Tech</strong></p>
+  <p>Not affiliated with Google, LinkedIn, Indeed, Groq, or Supabase.</p>
+  <br/>
+  <p>
+    <a href="https://arcovate-tech.github.io/privacy-policy/" target="_blank" rel="noopener">MeetSnap Privacy Policy</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:arcovate.tech@gmail.com">arcovate.tech@gmail.com</a>
+  </p>
+</footer>
 
 </body>
 </html>
